@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %} Getion des peronnes {% endblock %}
+{% block body %}
+
+    {{ form(form) }}
+
+<h1>Liste des personnes</h1>
+    <ul>
+    {% for personne in liste %}
+    <li>{{ personne.nom }} {{ personne.nom }}</li>
+{% endfor %}
+    </ul>
+
+{% endblock %}

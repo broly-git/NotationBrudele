@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %} Getion des Etudiant {% endblock %}
+{% block body %}
+
+    {{ form(form) }}
+
+    <h1>Liste des etudiants</h1>
+    <ul>
+        {% for etudiant in liste %}
+            <li>{{ etudiant.nom }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

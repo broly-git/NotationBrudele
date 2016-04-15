@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %} Getion des sessions {% endblock %}
+{% block body %}
+
+    {{ form(form) }}
+
+    <h1>Les sessions </h1>
+    <ul>
+        {% for session in liste %}
+            <li>{{ session.intitule }}
+                {{ session.dateDebut|date("d/m/y") }}
+                au
+                {{ session.dateFin|date("d/m/y") }}
+                par {{ session.enseignant ? session.enseignant.nom : 'inconnu' }}
+            </li>
+
+        {% endfor %}
+    </ul>
+
+{% endblock %}
